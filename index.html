@@ -4,23 +4,368 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					fontFamily: {
-						sans: ['Roboto', 'sans-serif'],
-						serif: ['Lora', 'serif'],
-					},
-					screens: {
-						'2xl': '1440px',
-						'3xl': '2560px',
-					},
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', { packages: ['corechart'] });
+		google.charts.setOnLoadCallback(affiliateChart);
+
+		function affiliateData() {
+			return [
+				['Date', 'Earnings', 'Clicks'],
+				['11/01/24', 150, 65],
+				['11/03/24', 180, 95],
+				['11/05/24', 200, 35],
+				['11/07/24', 120, 25],
+				['11/09/24', 160, 88],
+				['11/11/24', 140, 12],
+				['11/13/24', 190, 80],
+				['11/15/24', 170, 0],
+				['11/17/24', 200, 21],
+				['11/19/24', 130, 38],
+				['11/21/24', 110, 55],
+				['11/23/24', 145, 6],
+				['11/25/24', 125, 1],
+				['11/27/24', 180, 39],
+				['11/29/24', 150, 8]
+			];
+		}
+
+		// Draw the chart
+		function affiliateChart() {
+			const data = google.visualization.arrayToDataTable(affiliateData());
+			const options = {
+				title: 'Earnings Overview',
+				legend: { position: 'top', alignment: 'end' },
+				hAxis: {
+					slantedText: true,
+					slantedTextAngle: 45,
+					title: 'Date'
 				},
-			},
-		};
+				vAxes: {
+					0: { title: 'Earnings', ticks: [ 0, 40, 80, 120, 160, 200 ] },
+					1: { title: 'Clicks', gridlines: { color: 'transparent' }, ticks: [ 0, 20, 40, 60, 80, 100 ] }
+				},
+				series: {
+					0: { targetAxisIndex: 0 },
+					1: { targetAxisIndex: 1 }
+				},
+				colors: ['#0017a8', '#00d713'],
+				pointSize: 4,
+				chartArea: { width: '70%', height: '50%' },
+				animation: {
+					startup: true,
+					duration: 1000,
+					easing: 'out'
+				}
+			};
+
+			const chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		}
 	</script>
+	<style>
+
+		/*body*/
+		.bg-gray-50 {
+            background-color: #F9FAFB;
+		}
+
+		.text-gray-800 {
+            color: rgb(31 41 55);
+		}
+        /*body*/
+
+        /*outer container*/
+		.w-full {
+			width: 100%;
+		}
+
+		.h-full {
+			height: 100%;
+		}
+
+		.h-auto {
+			height: auto;
+		}
+
+        .font-sans-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .font-sans-lora {
+            font-family: 'Lora', serif;
+        }
+        /*outer container*/
+		.justify-content-center {
+			justify-content: center;
+		}
+
+		.d-flex {
+			display: flex;
+		}
+
+		.p-6 {
+            padding: 1.5rem;
+		}
+
+		/*inner container*/
+		.w-container {
+			width: 100%;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.text-h-1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+		}
+
+		.font-700 {
+            font-weight: 700;
+		}
+
+		.mb-4 {
+            margin-bottom: 1rem;
+		}
+		.font-italic {
+			font-style: italic;
+		}
+
+		.text-h-2 {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+		}
+
+		.text-h-3-max-w {
+            max-width: 32rem;
+		}
+
+		.mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+		.text-h-3 {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+		}
+
+		.p-title-text {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+		}
+
+		.py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+		}
+
+		.py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+		}
+
+		.flex-direction {
+            flex-direction: column;
+		}
+
+		.items-center {
+            justify-items: center;
+		}
+
+		.gap-6 {
+            gap: 1.5rem;
+		}
+
+		.p-image-w {
+			width: 100%;
+		}
+
+		.max-w-xs {
+            max-width: 20rem;
+		}
+
+		.rounded-lg {
+            border-radius: 0.5rem;
+		}
+
+		.shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		}
+
+		.shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+		}
+
+		.max-w-full {
+			max-width: 100%;
+		}
+
+		.p-desc-container {
+			width: 100%;
+		}
+
+		.p-desc-text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+		}
+
+		.px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+
+		.leading-relaxed {
+            line-height: 1.625;
+		}
+
+		.chart {
+			width: 100%;
+			height: 450px;
+		}
+
+		.m-auto {
+			margin: auto;
+		}
+
+		.grid {
+            display: grid;
+		}
+
+		.grid-columns {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+
+		.gap-16 {
+            gap: 4rem;
+		}
+
+		.relative {
+			position: relative;
+		}
+
+		.bg-white {
+            background-color: #ffffff;
+		}
+
+		.p-5 {
+            padding: 1.25rem;
+		}
+
+		.aff-types-img-h {
+			height: 200px;
+		}
+
+		.object-cover {
+			object-fit: cover;
+		}
+
+		.text-black {
+            color: #000000;
+		}
+
+		.text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+		}
+
+		.font-semibold {
+            font-weight: 600;
+		}
+        /*inner container*/
+
+        @media screen and (min-width: 640px) {
+            .w-container {
+                width: 75%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .text-h-1 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+
+			.text-h-2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+			}
+
+            .text-h-3 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            .p-title-text {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+			.p-desc-text {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+			}
+
+            .grid-columns {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .w-container {
+                width: 91.666667%;
+            }
+
+            .flex-direction {
+                flex-direction: row;
+            }
+
+            .p-image-w {
+                width: 33.333333%;
+            }
+
+			.p-desc-container {
+				width: 66.666667%;;
+			}
+
+			.grid-columns {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+
+            .aff-types-img-h {
+                height: 150px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            .w-container {
+                width: 75%;
+            }
+
+            .aff-types-img-h {
+                height: 200px;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            .chart {
+				width: 75%;
+			}
+        }
+
+        @media screen and (min-width: 2560px) {
+            .w-container {
+                width: 50%;
+            }
+        }
+	</style>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
 		// Load Google Charts library
@@ -85,70 +430,42 @@
 	<title>Affiliate Landing Page</title>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
-<div class="font-sans flex justify-center w-full p-6">
-	<div class="w-full lg:w-11/12 xl:w-9/12 3xl:w-6/12 sm:w-9/12">
-
-		<div class="text-center">
-			<h1 class="text-2xl md:text-4xl font-bold mb-4">PLAYASIA GLOBAL PARTNER PROGRAM</h1>
-			<p class="italic text-lg md:text-xl mb-4">ARE YOU PASSIONATE ABOUT GAMING, COLLECTIBLES, AND OTHER IMPORTS FROM ASIA?</p>
-			<p class="max-w-lg mx-auto text-sm md:text-base">
-				Consider becoming a part of the Playasia family and together we can bring amazing
-				products and exclusive experiences to a global audience. Whether you’re a creator,
-				influencer, or website owner, this is your chance to collaborate with Playasia and
-				elevate your brand!
-			</p>
-		</div>
-
-		<div>
-			<h1 class="text-xl md:text-2xl font-bold py-6">Earning Reports and Data</h1>
-		</div>
-
-		<div class="flex flex-col lg:flex-row justify-center items-center w-full gap-6">
-			<!-- Image (on top for mobile) -->
-			<div class="w-full lg:w-1/3 max-w-xs mx-auto">
-				<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
-			</div>
-			<!-- Text Content -->
-			<div class="w-full lg:w-2/3 px-4 text-left">
-				<p class="text-base md:text-lg leading-relaxed">
-					“Earn on Every Order” – Our transparent earning system allows you to easily
-					track your growth. Real-time sales reports and data dashboards show your earnings,
-					conversions, and traffic. Visually display elements of the partner dashboard UI,
-					showing metrics such as orders, top products sold, and trending products.
+	<div class="font-sans-roboto w-full justify-content-center d-flex p-6">
+		<div class="w-container">
+			<div class="text-center">
+				<h1 class="text-h-1 font-700 mb-4">PLAYASIA GLOBAL PARTNER PROGRAM</h1>
+				<p class="font-italic text-h-2 mb-4">ARE YOU PASSIONATE ABOUT GAMING, COLLECTIBLES, AND OTHER IMPORTS FROM ASIA?</p>
+				<p class="text-h-3-max-w mx-auto text-h-3">
+					Consider becoming a part of the Playasia family and together we can bring amazing
+					products and exclusive experiences to a global audience. Whether you’re a creator,
+					influencer, or website owner, this is your chance to collaborate with Playasia and
+					elevate your brand!
 				</p>
 			</div>
-		</div>
-
-		<div id="chart_div" class="w-full py-6 m-auto h-[500px] 2xl:w-9/12"></div>
-
-		<div class="flex flex-col lg:flex-row w-full gap-6 py-6">
-			<!-- Text Content -->
-			<div class="w-full lg:w-2/3 px-4 lg:text-left">
-				<h1 class="text-xl md:text-2xl font-bold pb-6">Audience Incentives and Custom Products</h1>
-				<p class="text-base lg:text-left md:text-lg leading-relaxed">
-					Roll out custom Playasia-branded skins, stickers, and other items tailored for
-					your audience. Use this feature to build a “Rollout Campaign” engaging your
-					followers by offering exclusive designs that they can’t get anywhere
-				</p>
-			</div>
-			<!-- Image (on top for mobile) -->
-			<div class="w-full lg:w-1/3 max-w-xs mx-auto">
-				<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
-			</div>
-
-		</div>
-
-		<div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			<div>
-				<div class="relative w-full h-full bg-white p-5 flex flex-col shadow-xl rounded-lg">
-					<!-- Image -->
-					<div class="relative w-full h-[200px] lg:h-[150px] xl:h-[200px] shadow-lg rounded-lg">
+				<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
+			</div>
+			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
+				<div class="p-image-w max-w-xs mx-auto">
+					<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
+				</div>
+				<div class="p-desc-container text-left">
+					<p class="p-desc-text leading-relaxed">
+						“Earn on Every Order” – Our transparent earning system allows you to easily
+						track your growth. Real-time sales reports and data dashboards show your earnings,
+						conversions, and traffic. Visually display elements of the partner dashboard UI,
+						showing metrics such as orders, top products sold, and trending products.
+					</p>
+				</div>
+			</div>
+			<div id="chart_div" class="chart py-6 m-auto"></div>
+			<div class="w-full grid grid-columns gap-16 items-center">
+				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<!-- Text -->
 					<div class="py-4 text-center text-black">
 						<h3 class="text-lg font-semibold">Personalities</h3>
 						<p class="text-sm">
@@ -159,16 +476,12 @@
 						</p>
 					</div>
 				</div>
-			</div>
-			<div>
-				<div class="relative w-full h-full bg-white p-5 flex flex-col shadow-xl rounded-lg">
-					<!-- Image -->
-					<div class="relative w-full h-[200px] lg:h-[150px] xl:h-[200px] shadow-lg rounded-lg">
+				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<!-- Text -->
 					<div class="py-4 text-center text-black">
 						<h3 class="text-lg font-semibold">Influencers</h3>
 						<p class="text-sm">
@@ -178,16 +491,12 @@
 						</p>
 					</div>
 				</div>
-			</div>
-			<div>
-				<div class="relative w-full h-full bg-white p-5 flex flex-col shadow-xl rounded-lg">
-					<!-- Image -->
-					<div class="relative w-full h-[200px] lg:h-[150px] xl:h-[200px] shadow-lg rounded-lg">
+				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<!-- Text -->
 					<div class="py-4 text-center text-black">
 						<h3 class="text-lg font-semibold">Bloggers & Content Creators</h3>
 						<p class="text-sm">
@@ -197,16 +506,12 @@
 						</p>
 					</div>
 				</div>
-			</div>
-			<div>
-				<div class="relative w-full h-full bg-white p-5 flex flex-col shadow-xl rounded-lg">
-					<!-- Image -->
-					<div class="relative w-full h-[200px] lg:h-[150px] xl:h-[200px] shadow-lg rounded-lg">
+				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<!-- Text -->
 					<div class="py-4 text-center text-black">
 						<h3 class="text-lg font-semibold">Everything in Between</h3>
 						<p class="text-sm">
@@ -220,6 +525,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
+
