@@ -279,6 +279,14 @@
 		.font-semibold {
             font-weight: 600;
 		}
+
+		.gap-aff-types {
+            gap: 1rem;
+		}
+
+		.aff-types-w {
+			width: 60%;
+		}
         /*inner container*/
 
         @media screen and (min-width: 640px) {
@@ -291,6 +299,10 @@
             .text-h-1 {
                 font-size: 2.25rem;
                 line-height: 2.5rem;
+            }
+
+            .gap-aff-types {
+                gap: 4rem;
             }
 
 			.text-h-2 {
@@ -315,6 +327,10 @@
 
             .grid-columns {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .aff-types-w {
+                width: 100%;
             }
         }
 
@@ -459,14 +475,14 @@
 				</div>
 			</div>
 			<div id="chart_div" class="chart py-6 m-auto"></div>
-			<div class="w-full grid grid-columns gap-16 items-center">
-				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+			<div class="w-full grid grid-columns gap-aff-types items-center">
+				<div class="relative aff-types-w h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
 					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<div class="py-4 text-center text-black">
+					<div class=" text-center text-black">
 						<h3 class="text-lg font-semibold">Personalities</h3>
 						<p class="text-sm">
 							Do you have a unique voice that resonates with a gaming or pop culture audience?
@@ -476,13 +492,13 @@
 						</p>
 					</div>
 				</div>
-				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+				<div class="relative aff-types-w h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
 					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<div class="py-4 text-center text-black">
+					<div class=" text-center text-black">
 						<h3 class="text-lg font-semibold">Influencers</h3>
 						<p class="text-sm">
 							If you have an established presence on platforms like Instagram, TikTok,
@@ -491,13 +507,13 @@
 						</p>
 					</div>
 				</div>
-				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+				<div class="relative aff-types-w h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
 					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<div class="py-4 text-center text-black">
+					<div class=" text-center text-black">
 						<h3 class="text-lg font-semibold">Bloggers & Content Creators</h3>
 						<p class="text-sm">
 							If you run a blog or website covering topics like gaming, anime, or tech, our partnership
@@ -506,13 +522,13 @@
 						</p>
 					</div>
 				</div>
-				<div class="relative w-full h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
+				<div class="relative aff-types-w h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg">
 					<div class="relative w-full aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
 							 alt="Image 1"
 							 class="w-full h-full object-cover rounded-lg">
 					</div>
-					<div class="py-4 text-center text-black">
+					<div class=" text-center text-black">
 						<h3 class="text-lg font-semibold">Everything in Between</h3>
 						<p class="text-sm">
 							Whether you’re a niche podcast host, community moderator, or an avid streamer just getting
