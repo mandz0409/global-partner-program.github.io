@@ -207,6 +207,14 @@
 			width: 100%;
 		}
 
+		.h-container {
+			width: 100%;
+		}
+
+		.h-pa-logo {
+			width: 100%;
+		}
+
 		.p-desc-text {
             font-size: 1rem;
             line-height: 1.5rem;
@@ -290,6 +298,10 @@
 		.aff-types-chibi {
 			width: 200px;
 		}
+
+		.h-chibi-w {
+            display: none;
+		}
         /*inner container*/
 
         @media screen and (min-width: 640px) {
@@ -354,6 +366,15 @@
                 width: 33.333333%;
             }
 
+			.h-chibi-w {
+                width: 50%;
+				display: block;
+			}
+
+			.h-pa-logo {
+				width: 60%;
+			}
+
 			.p-desc-container {
 				width: 66.666667%;;
 			}
@@ -381,11 +402,19 @@
             .chart {
 				width: 75%;
 			}
+
+            .h-chibi-max-w {
+                max-width: 20rem;
+            }
         }
 
         @media screen and (min-width: 2560px) {
             .w-container {
                 width: 50%;
+            }
+
+            .h-chibi-max-w {
+                max-width: 20rem;
             }
         }
 	</style>
@@ -455,22 +484,27 @@
 <body class="bg-gray-50 text-gray-800">
 	<div class="font-sans-roboto w-full justify-content-center d-flex p-6">
 		<div class="w-container">
-			<div class="text-center">
-				<h1 class="text-h-1 font-700 mb-4">PLAYASIA GLOBAL PARTNER PROGRAM</h1>
-				<p class="font-italic text-h-2 mb-4">ARE YOU PASSIONATE ABOUT GAMING, COLLECTIBLES, AND OTHER IMPORTS FROM ASIA?</p>
-				<p class="text-h-3-max-w mx-auto text-h-3">
-					Consider becoming a part of the Playasia family and together we can bring amazing
-					products and exclusive experiences to a global audience. Whether you’re a creator,
-					influencer, or website owner, this is your chance to collaborate with Playasia and
-					elevate your brand!
-				</p>
+			<div class="d-flex flex-direction justify-content-center items-center w-full">
+				<div class="h-container text-left h-full">
+					<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-405" alt="Placeholder Image" class="rounded-lg h-pa-logo">
+					<h1 class="font-italic text-h-2 mb-4 font-700">ARE YOU PASSIONATE ABOUT GAMING, COLLECTIBLES, AND OTHER IMPORTS FROM ASIA?</h1>
+					<p class="text-h-3 leading-relaxed">
+						Consider becoming a part of the Playasia family and together we can bring amazing
+						products and exclusive experiences to a global audience. Whether you’re a creator,
+						influencer, or website owner, this is your chance to collaborate with Playasia and
+						elevate your brand!
+					</p>
+				</div>
+				<div class="h-chibi-w h-chibi-max-w mx-auto items-center">
+					<img src="https://s.pacn.ws/gallery/large/GA.08533.0003.png?so27zf&v=PX-405" alt="Placeholder Image" class="rounded-lg max-w-full">
+				</div>
 			</div>
 			<div>
 				<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
 			</div>
 			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
 				<div class="p-image-w max-w-xs mx-auto">
-					<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
+					<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full">
 				</div>
 				<div class="p-desc-container text-left">
 					<p class="p-desc-text leading-relaxed">
