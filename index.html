@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
 		google.charts.load('current', { packages: ['corechart'] });
@@ -87,13 +87,18 @@
 			height: auto;
 		}
 
-        .font-sans-roboto {
-            font-family: 'Roboto', sans-serif;
+        .h-pa-logo-xalign {
+            text-align: center;
         }
 
-        .font-sans-lora {
-            font-family: 'Lora', serif;
+        .font-sans-montserrat {
+            font-family: 'Montserrat', sans-serif;
         }
+
+        .font-sans-enriqueta {
+            font-family: 'Enriqueta', serif;
+        }
+
         /*outer container*/
 		.justify-content-center {
 			justify-content: center;
@@ -116,13 +121,12 @@
 			text-align: center;
 		}
 
-		.text-h-1 {
-            font-size: 1.5rem;
-            line-height: 2rem;
+		.sec-vh {
+            height: 75vh;
 		}
 
 		.font-700 {
-            font-weight: 700;
+            font-weight: 800;
 		}
 
 		.mb-4 {
@@ -132,13 +136,10 @@
 			font-style: italic;
 		}
 
-		.text-h-2 {
-            font-size: 1.125rem;
-            line-height: 1.75rem;
-		}
-
-		.text-h-3-max-w {
-            max-width: 32rem;
+		.sec-1-head-text {
+            font-size: 1.9rem;
+            line-height: 2rem;
+			text-align: center;
 		}
 
 		.mx-auto {
@@ -147,9 +148,9 @@
 
         }
 
-		.text-h-3 {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
+        .sec-1-sub-text {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
 		}
 
 		.p-title-text {
@@ -212,7 +213,7 @@
 		}
 
 		.h-pa-logo {
-			width: 100%;
+			width: 90%;
 		}
 
 		.p-desc-text {
@@ -302,6 +303,18 @@
 		.h-chibi-w {
             display: none;
 		}
+
+		.text-justify {
+			text-align: justify;
+		}
+
+		.align-items-center {
+			align-items: center;
+		}
+
+		.m-top-0 {
+			margin-top: 0;
+		}
         /*inner container*/
 
         @media screen and (min-width: 640px) {
@@ -311,24 +324,19 @@
         }
 
         @media screen and (min-width: 768px) {
-            .text-h-1 {
-                font-size: 2.25rem;
-                line-height: 2.5rem;
-            }
-
             .gap-aff-types {
                 gap: 4rem;
             }
 
-			.text-h-2 {
-                font-size: 1.25rem;
-                line-height: 1.75rem;
+			.sec-1-head-text {
+                font-size: 2.5rem;
+                line-height: 2.75rem;
 			}
 
-            .text-h-3 {
-                font-size: 1rem;
+			.sec-1-sub-text {
+                font-size: 1.3rem;
                 line-height: 1.5rem;
-            }
+			}
 
             .p-title-text {
                 font-size: 1.5rem;
@@ -358,6 +366,10 @@
                 width: 91.666667%;
             }
 
+            .h-pa-logo-xalign {
+                text-align: left;
+            }
+
             .flex-direction {
                 flex-direction: row;
             }
@@ -366,9 +378,18 @@
                 width: 33.333333%;
             }
 
+            .sec-1-head-text {
+				text-align: left;
+            }
+
 			.h-chibi-w {
-                width: 50%;
+                width: 40%;
 				display: block;
+			}
+
+			.h-container {
+				width: 60%;
+                padding: 0 1rem 0 1rem
 			}
 
 			.h-pa-logo {
@@ -393,6 +414,11 @@
                 width: 75%;
             }
 
+			.h-container {
+				width: 60%;
+                padding: 0 1rem 0 1rem
+			}
+
             .aff-types-img-h {
                 height: 200px;
             }
@@ -402,19 +428,21 @@
             .chart {
 				width: 75%;
 			}
-
-            .h-chibi-max-w {
-                max-width: 20rem;
-            }
         }
 
         @media screen and (min-width: 2560px) {
             .w-container {
-                width: 50%;
+                width: 70%;
             }
 
-            .h-chibi-max-w {
-                max-width: 20rem;
+            .sec-1-head-text {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+            }
+
+            .sec-1-sub-text {
+                font-size: 2.3rem;
+                line-height: 2.5rem;
             }
         }
 	</style>
@@ -481,26 +509,30 @@
 	</script>
 	<title>Affiliate Landing Page</title>
 </head>
-<body class="bg-gray-50 text-gray-800">
-	<div class="font-sans-roboto w-full justify-content-center d-flex p-6">
+<body class="bg-gray-50 text-gray-800" style="margin: 0; padding: 1.5rem">
+	<div class="font-sans-montserrat w-full justify-content-center d-flex">
 		<div class="w-container">
-			<div class="d-flex flex-direction justify-content-center items-center w-full">
-				<div class="h-container text-left h-full">
-					<div class="text-center">
-						<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-405" alt="Placeholder Image" class="rounded-lg h-pa-logo">
+			<div class="d-flex flex-direction justify-content-center w-full sec-vh align-items-center">
+				<div class="h-container text-left">
+					<div class="h-pa-logo-xalign">
+						<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-405" alt="Placeholder Image" class="h-pa-logo">
 					</div>
-					<h1 class="font-italic text-h-2 mb-4 font-700 text-center">ARE YOU PASSIONATE ABOUT GAMING, COLLECTIBLES, AND OTHER IMPORTS FROM ASIA?</h1>
-					<p class="text-h-3 leading-relaxed text-center">
+					<h1 class="sec-1-head-text mb-4 font-700 m-top-0">"Are you passionate about gaming, collectibles, and other imports from asia?"</h1>
+					<p class="sec-1-sub-text text-justify">
 						Consider becoming a part of the Playasia family and together we can bring amazing
 						products and exclusive experiences to a global audience. Whether you’re a creator,
 						influencer, or website owner, this is your chance to collaborate with Playasia and
 						elevate your brand!
 					</p>
 				</div>
-				<div class="h-chibi-w h-chibi-max-w mx-auto items-center">
-					<img src="https://s.pacn.ws/gallery/large/GA.08533.0003.png?so27zf&v=PX-405" alt="Placeholder Image" class="rounded-lg max-w-full">
+				<div class="h-chibi-w  mx-auto items-center text-center">
+					<img src="https://s.pacn.ws/gallery/large/GA.08533.0004.png?soczo5&v=PX-405" alt="Placeholder Image" class="rounded-lg max-w-full" style="width: 90%">
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="font-sans-montserrat w-full justify-content-center d-flex">
+		<div class="w-container">
 			<div>
 				<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
 			</div>
@@ -510,21 +542,26 @@
 				</div>
 				<div class="p-desc-container text-left">
 					<p class="p-desc-text leading-relaxed">
-						“Earn on Every Order” – Our transparent earning system allows you to easily
-						track your growth. Real-time sales reports and data dashboards show your earnings,
-						conversions, and traffic. Visually display elements of the partner dashboard UI,
-						showing metrics such as orders, top products sold, and trending products.
+						“Earn on Every Order” – with our transparent system,
+						featuring real-time sales reports and data dashboards
+						to track your earnings, conversions, and traffic
+						effortlessly.
 					</p>
 				</div>
 			</div>
 			<div id="chart_div" class="chart py-6 m-auto"></div>
+		</div>
+	</div>
+	<div class="font-sans-montserrat w-full justify-content-center d-flex">
+		<div class="w-container">
 			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6 py-6">
 				<div class="p-desc-container text-left">
 					<h1 class="p-title-text font-700">Audience Incentives and Custom Products</h1>
 					<p class="p-desc-text leading-relaxed">
-						Roll out custom Playasia-branded skins, stickers, and other items tailored for
-						your audience. Use this feature to build a “Rollout Campaign” engaging your
-						followers by offering exclusive designs that they can’t get anywhere
+						Launch custom Playasia-branded skins, stickers,
+						and more with our “Rollout Campaign” Engaging
+						your audience with exclusive designs available
+						only through you.
 					</p>
 				</div>
 				<div class="p-image-w max-w-xs mx-auto">
