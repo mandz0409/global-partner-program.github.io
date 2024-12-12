@@ -50,7 +50,7 @@
 				},
 				colors: ['#0017a8', '#00d713'],
 				pointSize: 4,
-				chartArea: { width: '70%', height: '50%' },
+				chartArea: { width: '60%', height: '100%' },
 				animation: {
 					startup: true,
 					duration: 1000,
@@ -69,10 +69,53 @@
             background-color: #F9FAFB;
 		}
 
+		.max-height {
+			max-height: 100%;
+		}
+
 		.text-gray-800 {
             color: rgb(31 41 55);
 		}
         /*body*/
+
+		/*Section 1 (header styles)*/
+
+        .sec-1-head-text {
+            font-size: 1.9rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+
+        .sec-1-sub-text {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+
+        .h-pa-logo-xalign {
+            text-align: center;
+        }
+
+        .h-container {
+            width: 100%;
+        }
+
+        .h-pa-logo {
+            width: 90%;
+        }
+
+        .h-chibi-w {
+            display: none;
+        }
+
+		.hr-line-earn {
+            border-radius: 50px;
+			width: 80%;
+			height: 2px;
+			background-color: #e8e8e8;
+			border: none;
+		}
+
+        /*Section 1 (header styles)*/
 
         /*outer container*/
 		.w-full {
@@ -87,21 +130,17 @@
 			height: auto;
 		}
 
-        .h-pa-logo-xalign {
-            text-align: center;
-        }
-
         .font-sans-montserrat {
             font-family: 'Montserrat', sans-serif;
-        }
-
-        .font-sans-enriqueta {
-            font-family: 'Enriqueta', serif;
         }
 
         /*outer container*/
 		.justify-content-center {
 			justify-content: center;
+		}
+
+		.flex-dir-row {
+			flex-direction: row;
 		}
 
 		.d-flex {
@@ -121,8 +160,8 @@
 			text-align: center;
 		}
 
-		.sec-vh {
-            height: 75vh;
+		.sec-h {
+            height: 100%;
 		}
 
 		.font-700 {
@@ -136,22 +175,11 @@
 			font-style: italic;
 		}
 
-		.sec-1-head-text {
-            font-size: 1.9rem;
-            line-height: 2rem;
-			text-align: center;
-		}
-
 		.mx-auto {
             margin-left: auto;
             margin-right: auto;
 
         }
-
-        .sec-1-sub-text {
-            font-size: 1.2rem;
-            line-height: 1.4rem;
-		}
 
 		.p-title-text {
             font-size: 1.25rem;
@@ -208,14 +236,6 @@
 			width: 100%;
 		}
 
-		.h-container {
-			width: 100%;
-		}
-
-		.h-pa-logo {
-			width: 90%;
-		}
-
 		.p-desc-text {
             font-size: 1rem;
             line-height: 1.5rem;
@@ -259,6 +279,10 @@
 			position: relative;
 		}
 
+		.absolute {
+			position: absolute;
+		}
+
 		.bg-white {
             background-color: #ffffff;
 		}
@@ -300,10 +324,6 @@
 			width: 200px;
 		}
 
-		.h-chibi-w {
-            display: none;
-		}
-
 		.text-justify {
 			text-align: justify;
 		}
@@ -315,11 +335,19 @@
 		.m-top-0 {
 			margin-top: 0;
 		}
+
+        .chart-w {
+			width: 100%;
+		}
+
+		.earnings-ov-w {
+			width: 100%;
+		}
         /*inner container*/
 
         @media screen and (min-width: 640px) {
             .w-container {
-                width: 75%;
+                width: 90%;
             }
         }
 
@@ -359,6 +387,18 @@
             .aff-types-chibi {
                 width: 100%;
             }
+
+            .chart {
+                width: 60%;
+            }
+
+			.earnings-ov-w {
+				width: 40%;
+			}
+
+            .flex-direction {
+                flex-direction: row;
+            }
         }
 
         @media screen and (min-width: 1024px) {
@@ -387,6 +427,10 @@
 				display: block;
 			}
 
+            .h-chibi-w img{
+				width: 90%;
+            }
+
 			.h-container {
 				width: 60%;
                 padding: 0 1rem 0 1rem
@@ -406,6 +450,10 @@
 
             .aff-types-img-h {
                 height: 150px;
+            }
+
+            .earnings-ov-w {
+                width: 40%;
             }
         }
 
@@ -444,7 +492,27 @@
                 font-size: 2.3rem;
                 line-height: 2.5rem;
             }
+
+            .chart-w {
+                width: 80%;
+            }
         }
+
+        .fade-in-div {
+            opacity: 0;
+            animation: fadeInEffect 1s ease-in forwards;
+        }
+
+        /* Define the fade-in animation */
+        @keyframes fadeInEffect {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
 	</style>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
@@ -510,9 +578,9 @@
 	<title>Affiliate Landing Page</title>
 </head>
 <body class="bg-gray-50 text-gray-800" style="margin: 0; padding: 1.5rem">
-	<div class="font-sans-montserrat w-full justify-content-center d-flex">
+	<div class="font-sans-montserrat w-full justify-content-center d-flex fade-in-div">
 		<div class="w-container">
-			<div class="d-flex flex-direction justify-content-center w-full sec-vh align-items-center">
+			<div class="d-flex flex-direction justify-content-center w-full sec-h align-items-center">
 				<div class="h-container text-left">
 					<div class="h-pa-logo-xalign">
 						<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-405" alt="Placeholder Image" class="h-pa-logo">
@@ -526,30 +594,70 @@
 					</p>
 				</div>
 				<div class="h-chibi-w  mx-auto items-center text-center">
-					<img src="https://s.pacn.ws/gallery/large/GA.08533.0004.png?soczo5&v=PX-405" alt="Placeholder Image" class="rounded-lg max-w-full" style="width: 90%">
+					<img src="https://s.pacn.ws/gallery/large/GA.08533.0004.png?soczo5&v=PX-405" alt="Placeholder Image" class="rounded-lg max-w-full">
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="font-sans-montserrat w-full justify-content-center d-flex">
 		<div class="w-container">
-			<div>
-				<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
-			</div>
-			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
-				<div class="p-image-w max-w-xs mx-auto">
-					<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full">
+			<div class="sec-h">
+				<div>
+					<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
 				</div>
-				<div class="p-desc-container text-left">
-					<p class="p-desc-text leading-relaxed">
-						“Earn on Every Order” – with our transparent system,
-						featuring real-time sales reports and data dashboards
-						to track your earnings, conversions, and traffic
-						effortlessly.
-					</p>
+				<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
+					<div class="p-image-w max-w-xs mx-auto">
+						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full">
+					</div>
+					<div class="p-desc-container text-left">
+						<p class="p-desc-text leading-relaxed">
+							“Earn on Every Order” – with our transparent system,
+							featuring real-time sales reports and data dashboards
+							to track your earnings, conversions, and traffic
+							effortlessly.
+						</p>
+					</div>
+				</div>
+				<div class="font-italic" style="padding: 1rem 0 1rem 0; text-decoration: underline">
+					Data dashboard example:
+				</div>
+				<div class="d-flex flex-direction justify-content-center items-center chart-w gap-6 mx-auto">
+					<div id="chart_div" class="chart" style="border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+					<div class="earnings-ov-w h-full">
+						<div class="py-6 w-full h-full" style="background-color: white; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+							<div style="width: 100%; font-weight: bold; padding: 20px 0 0px 20px; ">Summary for this month</div>
+							<div style="width: 100%; font-weight: bold; padding: 0px 0px 20px 20px;">
+								( November 2024 )
+							</div>
+							<div class="d-flex flex-dir-row">
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Items shipped:</div>
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+							</div>
+							<hr class="hr-line-earn">
+							<div class="d-flex flex-dir-row">
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Earnings:</div>
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+							</div>
+							<hr class="hr-line-earn">
+							<div class="d-flex flex-dir-row">
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Ordered Items:</div>
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+							</div>
+							<hr class="hr-line-earn">
+							<div class="d-flex flex-dir-row">
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">Clicks:</div>
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">2002</div>
+							</div>
+							<hr class="hr-line-earn">
+							<div class="d-flex flex-dir-row">
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">Conversion</div>
+								<div style="flex: 1; padding: 5px; margin-left: 10%;">100%</div>
+							</div>
+							<hr class="hr-line-earn">
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="chart_div" class="chart py-6 m-auto"></div>
 		</div>
 	</div>
 	<div class="font-sans-montserrat w-full justify-content-center d-flex">
