@@ -107,6 +107,18 @@
             display: none;
         }
 
+		.flex-1 {
+			flex: 1;
+		}
+
+		.font-bold {
+			font-weight: bold;
+		}
+
+		.bg-white {
+			background-color: #FFFFFF;
+		}
+
 		.hr-line-earn {
             border-radius: 50px;
 			width: 80%;
@@ -196,6 +208,11 @@
             padding-bottom: 1.5rem;
 		}
 
+        .py-3rem {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
 		.flex-direction {
             flex-direction: column;
 		}
@@ -213,11 +230,11 @@
 		}
 
 		.max-w-xs {
-            max-width: 20rem;
+            max-width: 24rem;
 		}
 
 		.rounded-lg {
-            border-radius: 0.5rem;
+            border-radius: 1rem;
 		}
 
 		.shadow-lg {
@@ -470,11 +487,26 @@
             .aff-types-img-h {
                 height: 200px;
             }
+
+            .p-title-text {
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+
+            .p-desc-text {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+
         }
 
         @media screen and (min-width: 1440px) {
             .chart {
 				width: 75%;
+			}
+
+            .max-w-xs {
+				max-width: 20rem;
 			}
         }
 
@@ -493,8 +525,30 @@
                 line-height: 2.5rem;
             }
 
-            .chart-w {
-                width: 80%;
+            .p-title-text {
+                font-size: 3rem;
+                line-height: 2rem;
+            }
+
+            .p-desc-text {
+                font-size: 2rem;
+                line-height: 2.75rem;
+            }
+
+			.chart {
+				height: 700px;
+			}
+
+            .summary-ov-font {
+                font-size: 1.6rem;
+            }
+
+            .dashb-label-font-size {
+				font-size: 2rem;
+			}
+
+            .max-w-xs {
+                max-width: 30rem;
             }
         }
 
@@ -510,6 +564,33 @@
             }
             100% {
                 opacity: 1;
+            }
+        }
+
+        .bg {
+            animation:slide 50s ease-in-out infinite alternate;
+            background-image: linear-gradient(45deg, #F9FAFB 50%, #002d72 50%);
+            bottom:0;
+            left:-50%;
+            opacity:.2;
+            position:fixed;
+            right:-50%;
+            top:0;
+            z-index:-1;
+        }
+
+        .bg2 {
+            animation-direction:alternate-reverse;
+            animation-duration:40s;
+            background-image: linear-gradient(135deg, #F9FAFB 50%, #002d72 50%);
+        }
+
+        @keyframes slide {
+            0% {
+                transform:translateX(-25%);
+            }
+            100% {
+                transform:translateX(25%);
             }
         }
 
@@ -578,6 +659,8 @@
 	<title>Affiliate Landing Page</title>
 </head>
 <body class="bg-gray-50 text-gray-800" style="margin: 0; padding: 1.5rem">
+<div class="bg"></div>
+<div class="bg2 bg"></div>
 	<div class="font-sans-montserrat w-full justify-content-center d-flex fade-in-div">
 		<div class="w-container">
 			<div class="d-flex flex-direction justify-content-center w-full sec-h align-items-center">
@@ -601,13 +684,13 @@
 	</div>
 	<div class="font-sans-montserrat w-full justify-content-center d-flex">
 		<div class="w-container">
-			<div class="sec-h">
+			<div class="sec-h py-3rem">
 				<div>
 					<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
 				</div>
 				<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
 					<div class="p-image-w max-w-xs mx-auto">
-						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full">
+						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full shadow-lg">
 					</div>
 					<div class="p-desc-container text-left">
 						<p class="p-desc-text leading-relaxed">
@@ -618,40 +701,40 @@
 						</p>
 					</div>
 				</div>
-				<div class="font-italic" style="padding: 1rem 0 1rem 0; text-decoration: underline">
+				<div class="font-italic dashb-label-font-size" style="padding: 1rem 0 1rem 0; text-decoration: underline;">
 					Data dashboard example:
 				</div>
-				<div class="d-flex flex-direction justify-content-center items-center chart-w gap-6 mx-auto">
-					<div id="chart_div" class="chart" style="border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+				<div class="d-flex flex-direction justify-content-center items-center chart-w gap-6 mx-auto summary-ov-font">
+					<div id="chart_div" class="chart shadow-lg rounded-lg" style="overflow: hidden;"></div>
 					<div class="earnings-ov-w h-full">
-						<div class="py-6 w-full h-full" style="background-color: white; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-							<div style="width: 100%; font-weight: bold; padding: 20px 0 0px 20px; ">Summary for this month</div>
-							<div style="width: 100%; font-weight: bold; padding: 0px 0px 20px 20px;">
+						<div class="py-6 w-full h-full shadow-lg rounded-lg bg-white">
+							<div class="w-full font-bold" style="padding: 0 0 0 20px; ">Summary for this month</div>
+							<div class="w-full font-bold" style="padding: 0 0 10px 20px;">
 								( November 2024 )
 							</div>
 							<div class="d-flex flex-dir-row">
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Items shipped:</div>
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">Total Items shipped:</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">22</div>
 							</div>
 							<hr class="hr-line-earn">
 							<div class="d-flex flex-dir-row">
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Earnings:</div>
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">Total Earnings:</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">22</div>
 							</div>
 							<hr class="hr-line-earn">
 							<div class="d-flex flex-dir-row">
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">Total Ordered Items:</div>
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">22</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">Total Ordered Items:</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">22</div>
 							</div>
 							<hr class="hr-line-earn">
 							<div class="d-flex flex-dir-row">
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">Clicks:</div>
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">2002</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">Clicks:</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">2002</div>
 							</div>
 							<hr class="hr-line-earn">
 							<div class="d-flex flex-dir-row">
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">Conversion</div>
-								<div style="flex: 1; padding: 5px; margin-left: 10%;">100%</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">Conversion:</div>
+								<div class="flex-1" style="padding: 5px; margin-left: 10%;">100%</div>
 							</div>
 							<hr class="hr-line-earn">
 						</div>
@@ -662,21 +745,59 @@
 	</div>
 	<div class="font-sans-montserrat w-full justify-content-center d-flex">
 		<div class="w-container">
-			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6 py-6">
-				<div class="p-desc-container text-left">
-					<h1 class="p-title-text font-700">Audience Incentives and Custom Products</h1>
-					<p class="p-desc-text leading-relaxed">
-						Launch custom Playasia-branded skins, stickers,
-						and more with our “Rollout Campaign” Engaging
-						your audience with exclusive designs available
-						only through you.
-					</p>
+			<div class="sec-h py-3rem">
+				<div class="d-flex flex-direction justify-content-center items-center w-full gap-6 align-items-center">
+					<div class="p-desc-container text-left">
+						<h1 class="p-title-text font-700 py-4">Audience Incentives and Custom Products</h1>
+						<p class="p-desc-text leading-relaxed">
+							Launch custom Playasia-branded skins, stickers,
+							and more with our “Rollout Campaign” Engaging
+							your audience with exclusive designs available
+							only through you.
+						</p>
+					</div>
+					<div class="p-image-w max-w-xs mx-auto">
+						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
+					</div>
 				</div>
-				<div class="p-image-w max-w-xs mx-auto">
-					<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
+				<div class="align-items-center">
+					<div>
+						<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
+					</div>
+					<div class="d-flex flex-direction justify-content-center items-center w-full gap-6">
+						<div class="p-image-w max-w-xs mx-auto">
+							<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg max-w-full shadow-lg">
+						</div>
+						<div class="p-desc-container text-left">
+							<p class="p-desc-text leading-relaxed">
+								“Earn on Every Order” – with our transparent system,
+								featuring real-time sales reports and data dashboards
+								to track your earnings, conversions, and traffic
+								effortlessly.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-direction justify-content-center items-center w-full gap-6 align-items-center">
+					<div class="p-desc-container text-left">
+						<h1 class="p-title-text font-700 py-4">Audience Incentives and Custom Products</h1>
+						<p class="p-desc-text leading-relaxed">
+							Launch custom Playasia-branded skins, stickers,
+							and more with our “Rollout Campaign” Engaging
+							your audience with exclusive designs available
+							only through you.
+						</p>
+					</div>
+					<div class="p-image-w max-w-xs mx-auto">
+						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Placeholder Image" class="rounded-lg shadow-lg max-w-full">
+					</div>
 				</div>
 			</div>
-			<div class="w-full grid grid-columns gap-aff-types items-center">
+		</div>
+	</div>
+	<div class="font-sans-montserrat w-full justify-content-center d-flex">
+		<div class="w-container">
+			<div class="w-full grid grid-columns gap-aff-types items-center sec-h">
 				<div class="relative aff-types-w h-auto bg-white p-5 flex flex-direction shadow-xl rounded-lg items-center">
 					<div class="relative aff-types-chibi aff-types-img-h shadow-lg rounded-lg">
 						<img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
