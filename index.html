@@ -63,6 +63,84 @@
 		}
 	</script>
 	<style>
+		/*form*/
+        .form-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            text-align: center;
+            margin: 0 0 1rem 0;
+			font-weight: 800;
+			font-size: 2.5rem;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0; /* No gap between fields */
+        }
+
+		.form-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0; /* No gap between fields */
+		}
+
+        .form-image {
+            text-align: center;
+        }
+
+		.form-image img {
+			width: 50%;
+		}
+
+        .form-grid div,
+		.form-grid-3 div{
+            padding: 10px; /* Padding for space inside each field */
+        }
+        .form-grid label,
+		.form-grid-3 label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-grid input,
+        .form-grid select,
+        .form-grid textarea,
+        .form-grid-3 input,
+        .form-grid-3 select,
+        .form-grid-3 textarea{
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-grid textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-actions button:hover {
+            background-color: #0056b3;
+        }
+        /*form*/
 
         /*body*/
         .bg-gray-50 {
@@ -751,7 +829,7 @@
 				<div class="h-pa-logo-xalign">
 					<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-405" alt="Placeholder Image" class="h-pa-logo">
 				</div>
-				<h1 class="sec-1-head-text mb-4 font-700 m-top-0">"Are you passionate about gaming, collectibles, and other imports from asia?"</h1>
+				<h1 class="sec-1-head-text mb-4 font-700 m-top-0 mobile-padding">"Are you passionate about gaming, collectibles, and other imports from asia?"</h1>
 				<p class="sec-1-sub-text text-justify mobile-padding">
 					Consider becoming a part of the Playasia family and together we can bring amazing
 					products and exclusive experiences to a global audience. Whether you’re a creator,
@@ -971,6 +1049,128 @@
 					start creating together!
 				</p>
 			</div>
+		</div>
+	</div>
+</div>
+<div class="font-sans-montserrat w-full justify-content-center d-flex py-3rem">
+	<div class="w-container">
+		<div class="form-container rounded-lg shadow-lg">
+			<div class="form-image">
+				<img src="https://s.pacn.ws/gallery/large/GA.08533.0002.png?so27fe&v=PX-406" alt="Partner Program">
+				<h2 class="form-title">Partnership Application</h2>
+				<p>
+					You’re just one step away from joining the Playasia Global Partner
+					Program! We’re excited about the possibility of working together.
+					This form helps us learn more about you and your talents.
+				</p>
+			</div>
+			<form>
+				<div class="form-grid">
+					<div>
+						<input type="text" id="full-name" name="first-name" placeholder="Full Name" required>
+					</div>
+					<div>
+						<input type="email" id="email-add" name="email-add" placeholder="Email Address" required>
+					</div>
+					<div>
+						<input type="text" id="yt-url" name="yt-url" placeholder="Youtube URL">
+					</div>
+					<div>
+						<input type="text" id="twitter-url" name="twitter-url" placeholder="Twitter URL">
+					</div>
+					<div>
+						<input type="text" id="twitch-url" name="twitch-url" placeholder="Twitch URL">
+					</div>
+					<div>
+						<input type="text" id="fbgg-url" name="fbgg-url" placeholder="Facebook Gaming URL">
+					</div>
+					<div>
+						<input type="text" id="tiktok-url" name="tiktok-url" placeholder="TikTok URL">
+					</div>
+					<div>
+						<input type="text" id="ig-url" name="ig-url" placeholder="Instagram URL">
+					</div>
+					<div style="grid-column: span 2;">
+						<input type="text" id="other-url" name="other-url" placeholder="Other URL">
+					</div>
+				</div>
+				<div class="form-grid-3">
+					<div>
+						<label for="yt-subs">Youtube Subscribers ></label>
+						<select id="yt-subs" name="yt-subs" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+					<div>
+						<label for="twitter-followers">Twitter Folowers ></label>
+						<select id="twitter-followers" name="twitter-followers" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+					<div>
+						<label for="twitch-followers">Twitch Followers ></label>
+						<select id="twitch-followers" name="twitch-followers" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+					<div>
+						<label for="ig-followers">Instagram Followers ></label>
+						<select id="ig-followers" name="ig-followers" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+					<div>
+						<label for="tiktok-followers">Tiktok Followers ></label>
+						<select id="tiktok-followers" name="tiktok-followers" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+					<div>
+						<label for="fbgg">FB Gaming ></label>
+						<select id="fbgg" name="fbgg" required>
+							<option value="">Select</option>
+							<option value="1k-less">Less than 1k</option>
+							<option value="1k-5k">1,000 - 5,000</option>
+							<option value="5k-10k">5,000 - 10,000</option>
+							<option value="10k-50k">10,000 - 50,000</option>
+							<option value="50k-up">50,000 - above</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-grid">
+					<div style="grid-column: span 2;">
+						<textarea id="cover-letter" name="cover-letter" placeholder="Tell Us What You Will Bring To The Playasia Fam"></textarea>
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
