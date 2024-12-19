@@ -85,7 +85,7 @@
 
 		.form-grid-3 {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 0; /* No gap between fields */
 		}
 
@@ -307,8 +307,8 @@
         }
 
         .py-6 {
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         .py-3rem {
@@ -467,6 +467,15 @@
         .earnings-ov-w {
             width: 100%;
         }
+
+        .m-0 {
+            margin: 0;
+        }
+
+		.sec-div-py {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+		}
         /*inner container*/
 
         @media screen and (min-width: 640px) {
@@ -547,6 +556,11 @@
                 border-radius: 0;
             }
 
+            .py-6 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
         }
 
         @media screen and (min-width: 1024px) {
@@ -607,6 +621,12 @@
 
             .earnings-ov-w {
                 width: 40%;
+            }
+
+            .form-grid-3 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 0; /* No gap between fields */
             }
         }
 
@@ -843,9 +863,9 @@
 		</div>
 	</div>
 </div>
-<div class="font-sans-montserrat w-full justify-content-center d-flex py-3rem">
+<div class="font-sans-montserrat w-full justify-content-center d-flex py-6">
 	<div class="w-container">
-		<div class="sec-h py-3rem mobile-padding">
+		<div class="sec-h py-6 mobile-padding">
 			<div>
 				<h1 class="p-title-text py-6 font-700">Earning Reports and Data</h1>
 			</div>
@@ -904,12 +924,12 @@
 		</div>
 	</div>
 </div>
-<div class="font-sans-montserrat w-full justify-content-center d-flex shadow-lg py-3rem mobile-radius" style="background-color: rgba(249, 250, 251, 0.9);">
+<div class="font-sans-montserrat w-full justify-content-center d-flex shadow-lg py-6 mobile-radius" style="background-color: rgba(249, 250, 251, 0.9);">
 	<div class="w-container">
-		<div class="sec-h py-3rem mobile-padding">
+		<div class="sec-h py-6 mobile-padding">
 			<div class="d-flex flex-direction justify-content-center items-center w-full gap-6 align-items-center">
 				<div class="p-desc-container text-left">
-					<h1 class="p-title-text font-700 py-4">Audience Incentives and Custom Products</h1>
+					<h1 class="p-title-text font-700 py-4 m-0">Audience Incentives and Custom Products</h1>
 					<p class="p-desc-text leading-relaxed">
 						Launch custom Playasia-branded skins, stickers,
 						and more with our “Rollout Campaign” Engaging
@@ -956,7 +976,7 @@
 		</div>
 	</div>
 </div>
-<div class="font-sans-montserrat w-full justify-content-center d-flex py-3rem">
+<div class="font-sans-montserrat w-full justify-content-center d-flex py-6">
 	<div class="w-container">
 		<div class="d-flex flex-direction justify-content-center w-full sec-h align-items-center">
 			<div class="footer-container font-italic">
@@ -1039,11 +1059,11 @@
 		</div>
 	</div>
 </div>
-<div class="font-sans-montserrat w-full justify-content-center d-flex py-3rem">
+<div class="font-sans-montserrat w-full justify-content-center d-flex py-6 m-0">
 	<div class="w-container">
 		<div class="d-flex flex-direction justify-content-center w-full sec-h align-items-center">
 			<div class="footer-container text-left">
-				<p class="sec-4-sub-text mobile-padding font-700 font-italic" style="color: red">
+				<p class="sec-4-sub-text mobile-padding font-700 font-italic m-0" style="color: red">
 					If you think you have what it takes to join our growing network
 					of partners and collaborators, fill out the form below, and let’s
 					start creating together!
@@ -1052,7 +1072,7 @@
 		</div>
 	</div>
 </div>
-<div class="font-sans-montserrat w-full justify-content-center d-flex py-3rem">
+<div class="font-sans-montserrat w-full justify-content-center d-flex py-6 m-0">
 	<div class="w-container">
 		<div class="form-container rounded-lg shadow-lg">
 			<div class="form-image">
@@ -1096,7 +1116,7 @@
 				</div>
 				<div class="form-grid-3">
 					<div>
-						<label for="yt-subs">Youtube Subscribers ></label>
+						<label for="yt-subs">YT Subscribers</label>
 						<select id="yt-subs" name="yt-subs" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
@@ -1107,7 +1127,7 @@
 						</select>
 					</div>
 					<div>
-						<label for="twitter-followers">Twitter Folowers ></label>
+						<label for="twitter-followers">Twitter Folowers</label>
 						<select id="twitter-followers" name="twitter-followers" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
@@ -1118,7 +1138,7 @@
 						</select>
 					</div>
 					<div>
-						<label for="twitch-followers">Twitch Followers ></label>
+						<label for="twitch-followers">Twitch Followers</label>
 						<select id="twitch-followers" name="twitch-followers" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
@@ -1129,7 +1149,7 @@
 						</select>
 					</div>
 					<div>
-						<label for="ig-followers">Instagram Followers ></label>
+						<label for="ig-followers">IG Followers</label>
 						<select id="ig-followers" name="ig-followers" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
@@ -1140,7 +1160,7 @@
 						</select>
 					</div>
 					<div>
-						<label for="tiktok-followers">Tiktok Followers ></label>
+						<label for="tiktok-followers">Tiktok Followers</label>
 						<select id="tiktok-followers" name="tiktok-followers" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
@@ -1151,7 +1171,7 @@
 						</select>
 					</div>
 					<div>
-						<label for="fbgg">FB Gaming ></label>
+						<label for="fbgg">FB Gaming</label>
 						<select id="fbgg" name="fbgg" required>
 							<option value="">Select</option>
 							<option value="1k-less">Less than 1k</option>
